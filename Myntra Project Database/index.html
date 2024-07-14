@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            width: 100%;
+            margin: auto;
+            border: 1px solid #ccc;
+            background-color: white;
+        }
+        .header, .nav, .main-content, .footer {
+            padding: 10px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .logo img {
+            height: 30px;
+        }
+        .header .icons {
+            display: flex;
+            gap: 10px;
+        }
+        .icons img {
+            width: 20px;
+            height: 20px;
+        }
+        .search-bar {
+            width: 100%;
+            padding: 5px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            background-color: #f8f8f8;
+            padding: 10px 0;
+        }
+        .nav button {
+            background: none;
+            border: none;
+            font-size: 16px;
+            padding: 5px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .nav .active {
+            background-color: #000;
+            color: white;
+        }
+        .category-menu {
+            display: flex;
+            justify-content: space-around;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+        .category-menu div {
+            display: inline-block;
+            text-align: center;
+            margin: 0 10px;
+        }
+        .category-menu div img {
+            display: block;
+            margin: 0 auto;
+            width: 50px;
+            height: 50px;
+        }
+        .main-content img {
+            width: 100%;
+            height: auto;
+        }
+        .main-content .title {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .filter-buttons {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+        .filter-buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .filter-buttons .active {
+            background-color: #ff4081;
+            color: white;
+        }
+        .filter-buttons .inactive {
+            background-color: #f8f8f8;
+            color: black;
+        }
+        .items {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px 0;
+        }
+        .items img {
+            width: 30%;
+            height: auto;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f8f8f8;
+            padding: 10px 0;
+        }
+        .footer button {
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .footer button img {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 5px;
+        }
+        .footer button .badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 5px;
+            font-size: 12px;
+        }
+        .responsive-button {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            display: flex;
+            align-items: center;
+            background-color: #ff4081;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 600px) {
+            .responsive-button {
+                bottom: 5px;
+                right: 5px;
+                padding: 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="C:\Users\piyus\Downloads\fwd.jpeg" alt="fwd">
+            </div>
+            <div class="icons">
+                <span>🔔</span>
+                <span>❤️</span>
+                <span>👤</span>
+            </div>
+        </div>
+        <input type="text" class="search-bar" placeholder="Search for Vita">
+        <div class="nav">
+            <button class="active">Men</button>
+            <button>Women</button>
+        </div>
+        <div class="category-menu">
+            <div>
+                <img src="C:\Users\piyus\Downloads\new.jpeg"  alt="New">
+                <div>NEW</div>
+            </div>
+            <div>
+                <img src="C:\Users\piyus\Downloads\tops.jpeg" alt="Tops">
+                <div>TOPS</div>
+            </div>
+            <div>
+                <img src="C:\Users\piyus\Downloads\tshirts.jpeg" alt="T-Shirts">
+                <div>T-SHIRTS</div>
+            </div>
+            <div>
+                <img src="C:\Users\piyus\Downloads\dresses.jpeg" alt="Dresses">
+                <div>DRESSES</div>
+            </div>
+            <div>
+                <img src="C:\Users\piyus\Downloads\bottoms.jpeg" alt="Bottoms">
+                <div>BOTTOMS</div>
+            </div>
+        </div>
+        <div class="main-content">
+            <img src="C:\Users\piyus\Downloads\main.jpeg" alt="Main Image">
+            <div class="title">
+                <h2>New & Trending</h2>
+                <p>Shop Now</p>
+            </div>
+        </div>
+        <div class="filter-buttons">
+            <button class="active">This Week</button>
+            <button class="inactive">Last Week</button>
+            <button class="inactive">ALL</button>
+        </div>
+        <!-- <div class="items">
+            <img src="image1.jpg" alt="Item 1">
+            <img src="image2.jpg" alt="Item 2">
+            <img src="image3.jpg" alt="Item 3">
+        </div> -->
+        <div class="footer">
+            <button>
+                <img src="C:\Users\piyus\Downloads\myntra.jpeg" alt="fwd">
+                fwd
+            </button>
+            <button>
+                <img src="C:\Users\piyus\Downloads\minis.jpeg" alt="Minis">
+                Minis
+            </button>
+            <button>
+                <img src="C:\Users\piyus\Downloads\stores.jpeg" alt="Stores">
+                Stores
+            </button>
+            <button>
+                <img src="C:\Users\piyus\Downloads\Trends.jpeg" alt="Trends">
+                Trends
+            </button>
+            <button>
+                <img src="C:\Users\piyus\Downloads\Bag.jpeg" alt="Bag">
+                Bag
+                <span class="badge">3</span>
+            </button>
+        </div>
+    </div>
+    <div class="responsive-button">XPLORE</div>
+</body>
+</html>
